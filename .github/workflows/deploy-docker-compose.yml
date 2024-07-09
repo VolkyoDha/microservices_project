@@ -32,5 +32,3 @@ jobs:
 
       - name: Run Docker Compose
         run: docker-compose up -d
-
-  
