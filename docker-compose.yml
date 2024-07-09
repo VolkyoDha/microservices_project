@@ -2,8 +2,7 @@ version: '3.8'
 
 services:
   dock_productos:
-    build:
-      context: ./DOCK_PRODUCTOS
+    image: volkyodha/dock_productos:latest
     ports:
       - "3002:3002"
     depends_on:
@@ -12,8 +11,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/elysium
 
   dock_clientes:
-    build:
-      context: ./DOCK_CLIENTES
+    image: volkyodha/dock_clientes:latest
     ports:
       - "3001:3001"
     depends_on:
@@ -22,8 +20,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/elysium
 
   dock_visual:
-    build:
-      context: ./DOCK_VISUAL
+    image: volkyodha/dock_visual:latest
     ports:
       - "3003:3003"
     depends_on:
