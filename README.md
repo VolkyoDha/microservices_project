@@ -63,9 +63,9 @@ Visualización App: http://localhost:3003
     Volume: mongo-data:/data/db
 
 5. **Stopping the Containers**
-
+```bash
 docker-compose down
-
+```
 This will stop and remove the containers, but the data in the MongoDB volume will be persisted.
 
 
