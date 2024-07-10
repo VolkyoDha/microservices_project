@@ -23,7 +23,13 @@ Made by Carlos Lobo and Paola Solano
 ```
 2. **Navigate to the directory containing docker-compose.yml file:**
 
-3. **Build and start the Docker containers:**
+3. **Ensure the necessary Docker images are available:**
+   ```bash
+   docker pull your_username/dock_productos:latest
+   docker pull your_username/dock_clientes:latest
+   docker pull your_username/dock_visual:latest
+   ```
+4. **Build and start the Docker containers:**
 ```bash
 docker-compose up --build
 ```
@@ -37,17 +43,17 @@ Visualización App: http://localhost:3003
 
 ## dock_clientes
     Description: This service handles the entry of client information (name and phone number).
-    Build Context: ./DOCK_CLIENTES
+    image: volkyodha/dock_clientes:latest
     Port: 3001
     Environment Variable: MONGO_URL=mongodb://mongo:27017/elysium
 ## dock_productos
     Description: This service handles the entry of product information (name and price).
-    Build Context: ./DOCK_PRODUCTOS
+    image: volkyodha/dock_productos:latest
     Port: 3002
     Environment Variable: MONGO_URL=mongodb://mongo:27017/elysium
 ## dock_visual
     Description: This service displays the client and product information in a web interface.
-    Build Context: ./DOCK_VISUAL
+    image: volkyodha/dock_visual:latest
     Port: 3003
     Environment Variable: MONGO_URL=mongodb://mongo:27017/elysium
 ## mongo
@@ -61,3 +67,5 @@ Visualización App: http://localhost:3003
 docker-compose down
 
 This will stop and remove the containers, but the data in the MongoDB volume will be persisted.
+
+
