@@ -27,7 +27,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
           # Add Docker group and current user to it
-          sudo groupadd docker || true
+          sudo groupadd Docker
           sudo usermod -aG docker \$(whoami)
           newgrp docker
 
