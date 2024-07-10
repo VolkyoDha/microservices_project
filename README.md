@@ -57,7 +57,7 @@ Visualización App: http://localhost:3003
     Port: 3003
     Environment Variable: MONGO_URL=mongodb://mongo:27017/elysium
 ## mongo
-    Description: MongoDB database service used by the above applications.
+    Description: MongoDB database service is used by the above applications.
     Image: mongo:latest
     Port: 27017
     Volume: mongo-data:/data/db
