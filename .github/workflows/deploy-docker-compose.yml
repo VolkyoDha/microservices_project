@@ -20,6 +20,7 @@ jobs:
 
       - name: Copy files to EC2
         run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} "mkdir -p /home/ubuntu/microservice/ && sudo chown ubuntu:ubuntu /home/ubuntu/microservice/"
           scp -r -o StrictHostKeyChecking=no ./* ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/microservice/
 
       - name: SSH into EC2 and deploy
