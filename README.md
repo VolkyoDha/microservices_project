@@ -1,4 +1,4 @@
-# Docker Compose Setup for Clientes, Productos, and Visualización Apps
+# Docker Compose Setup for Clientes, Productos, and Visualización Apps Using EC2
 
 This setup uses Docker Compose to orchestrate three separate Node.js applications (Clientes, Productos, Visualización) and a MongoDB database. Each application runs in its own container and connects to the shared MongoDB instance.
 
