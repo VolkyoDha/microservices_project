@@ -16,11 +16,11 @@ Made by Carlos Lobo and Paola Solano
 ## Setup Instructions
 
 1. **Clone the repositories:**
-```bash
+   ```bash
    git clone https://github.com/VolkyoDha/Dock_Clientes DOCK_CLIENTES
    git clone https://github.com/VolkyoDha/Dock_productos DOCK_PRODUCTOS
    git clone https://github.com/VolkyoDha/Dock_Visual DOCK_VISUAL
-```
+   ```
 2. **Navigate to the directory containing docker-compose.yml file:**
 
 3. **Ensure the necessary Docker images are available:**
@@ -30,9 +30,9 @@ Made by Carlos Lobo and Paola Solano
    docker pull your_username/dock_visual:latest
    ```
 4. **Build and start the Docker containers:**
-```bash
-docker-compose up --build
-```
+   ```bash
+   docker-compose up --build
+   ```
 4. **Access the applications:**
 
 Clientes App: http://localhost:3001
